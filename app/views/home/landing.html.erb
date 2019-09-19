@@ -1,0 +1,40 @@
+<div id="main-container" class="main-container">
+  <%= icon('fas', 'home', class: 'nav-button nav-button-inicio', id: 'nav-button-inicio', data: { goto: 'inicio' }) %>
+  <%= icon('fas', 'angle-up', class: 'nav-button nav-button-up', id: 'nav-button-videos', data: { goto: 'videos' }) %>
+  <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-prensa', data: { goto: 'prensa' }) %>
+  <div id="content-container" class="content-container">
+    <div id="inicio-container" class="inner-container shown">
+      <%= image_tag('https://dummyimage.com/600x400/000/fff&text=Inicio') %>
+    </div>
+    <div id="videos-container" class="inner-container hidden">
+      <%= image_tag('https://dummyimage.com/600x400/000/fff&text=Videos') %>
+    </div>
+    <div id="articulos-container" class="inner-container hidden">
+      <%= image_tag('https://dummyimage.com/600x400/000/fff&text=Articulos') %>
+    </div>
+    <div id="archivos-container" class="inner-container hidden">
+      <h1><%= icon('fas', 'bars') %>
+        Archivos de Obras</h1>
+      <div class="cards-container">
+        <% (1..3).each do |c| %>
+          <div class="card">
+            <h2>Título</h2>
+            <h3>Coreografía: coreógrafo</h3>
+            <h4>Reseña</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, temporibus pariatur voluptas distinctio eaque cupiditate excepturi ea odit cumque voluptatem maiores consectetur fugiat natus aperiam sint nostrum, dolore animi minima!</p>
+            <%= link_to icon('fas', 'video', 'ver video'), 'https://youtube.com' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+    <div id="login-container" class="inner-container hidden">
+      <%= image_tag('https://dummyimage.com/600x400/000/fff&text=Login') %>
+    </div>
+    <div id="prensa-container" class="inner-container hidden">
+      <%= image_tag('https://dummyimage.com/600x400/000/fff&text=Prensa') %>
+    </div>
+  </div>
+  <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-articulos', data: { goto: 'articulos' }) %>
+  <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-archivos', data: { goto: 'archivos' }) %>
+  <%= icon('fas', 'user', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+</div>
