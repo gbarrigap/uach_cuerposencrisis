@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: uach_repositorio_dev
+  username: uach_repositorio_dev
+  password: uach_repositorio_dev
+
+test:
+  <<: *default
+  database: uach_repositorio_test
+  username: uach_repositorio_test
+  password: uach_repositorio_test
