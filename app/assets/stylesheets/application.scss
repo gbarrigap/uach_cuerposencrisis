@@ -33,13 +33,31 @@
   display: grid;
 }
 
-.card {
+.cards-container {
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  border: 2px solid #00000030;
-  background-color: #0000000a;
-  border-radius: 0.5rem;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 2px solid #00000030;
+    background-color: #0000000a;
+    border-radius: 0.5rem;
+    width: 20rem;
+    margin: 1rem;
+    padding: 1rem;
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 .error {
@@ -139,33 +157,31 @@ body {
       }
     }
 
+    div#articulos-container {
+      h1 {
+        align-self: end;
+        margin-left: 1rem;
+      }
+
+      .cards-container {
+        align-self: start;
+      }
+    }
+
     div#archivos-container {
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 4fr;
 
       h1 {
         align-self: end;
-        margin-bottom: 4rem;
-
-        i {
-          margin-right: 1rem;
-        }
+        margin-left: 1rem;
       }
 
       .cards-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 2rem;
+        align-self: start;
 
         .card {
-          width: 20rem;
-          padding: 1rem;
-
           a {
-            text-decoration: none;
-            color: black;
-
             i.fas.fa-video {
               color: rgb(19, 19, 19);
               font-size: 2rem;
