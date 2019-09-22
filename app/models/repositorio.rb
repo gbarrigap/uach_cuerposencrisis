@@ -1,0 +1,2 @@
+class Repositorio < ApplicationRecord
+end
