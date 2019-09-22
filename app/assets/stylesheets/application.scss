@@ -126,6 +126,7 @@ body {
       grid-column: 2;
       justify-content: center;
       align-items: center;
+      max-width: 80rem;
     }
 
     div#videos-container {
@@ -158,6 +159,12 @@ body {
     }
 
     div#articulos-container {
+      flex-flow: wrap row;
+
+      &.shown {
+        display: flex;
+      }
+
       h1 {
         align-self: end;
         margin-left: 1rem;
@@ -169,8 +176,11 @@ body {
     }
 
     div#archivos-container {
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr 4fr;
+      flex-flow: wrap row;
+
+      &.shown {
+        display: flex;
+      }
 
       h1 {
         align-self: end;
