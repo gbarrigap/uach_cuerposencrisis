@@ -16,10 +16,26 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener("turbolinks:load", function() {
-  for (const button of [...document.querySelectorAll('i.fas.nav-button')]) {
+  for (const button of [...document.querySelectorAll('i.fas.nav-button:not(#nav-button-logout)')]) {
     button.addEventListener('click', (e) => {
-      document.querySelector('.shown').classList.replace('shown', 'hidden');
-      document.getElementById(`${button.dataset.goto}-container`).classList.replace('hidden', 'shown');
+      document.querySelector('.shown')
+        .classList.replace('shown', 'hidden');
+
+      document.getElementById(`${button.dataset.goto}-container`)
+        .classList.replace('hidden', 'shown');
     });
   }
+
+  document.querySelector('#login-container > form')
+    .addEventListener('ajax:success', ({
+      target,
+      detail
+    }) => {
+      const response = detail[0];
+      const messageContainer = target.querySelector('.message-container');
+      if (!response) {
+        messageContainer.classList.add('error');
+        messageContainer.innerText = 'Las credenciales ingresadas son incorrectas';
+      }
+    });
 });
