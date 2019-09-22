@@ -38,4 +38,21 @@ document.addEventListener("turbolinks:load", function() {
         messageContainer.innerText = 'Las credenciales ingresadas son incorrectas';
       }
     });
+
+  for (const button of [...document.querySelectorAll('.card > input[type=button]')]) {
+    button.addEventListener('click', async ({
+      target
+    }) => {
+      const relatedTarget = document.querySelector(target.dataset.target);
+      const g = await fetch(target.dataset.url);
+      const data = await g.json();
+
+      relatedTarget.querySelector('h2').innerText = data.titulo;
+      relatedTarget.querySelector('h3 > span').innerText = data.coreografia;
+      relatedTarget.querySelector('p').innerText = data.resumen;
+
+      target.closest('.shown').classList.replace('shown', 'hidden');
+      relatedTarget.classList.replace('hidden', 'shown');
+    });
+  }
 });

@@ -49,13 +49,8 @@
     margin: 1rem;
     padding: 1rem;
 
-    a {
-      text-decoration: none;
-      color: black;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    input[type=button] {
+      width: 8rem;
     }
   }
 }
@@ -200,6 +195,28 @@ body {
               vertical-align: middle;
             }
           }
+        }
+      }
+    }
+
+    div#archivo-container {
+      flex-flow: wrap row;
+      align-self: center;
+      row-gap: 2rem;
+
+      &.shown {
+        display: flex;
+      }
+
+      div.ficha-video-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+        justify-items: center;
+        align-items: center;
+
+        div.ficha-container {
+          width: 20rem;
         }
       }
     }
