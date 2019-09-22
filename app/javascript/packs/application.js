@@ -47,12 +47,17 @@ document.addEventListener("turbolinks:load", function() {
       const g = await fetch(target.dataset.url);
       const data = await g.json();
 
-      relatedTarget.querySelector('h2').innerText = data.titulo;
-      relatedTarget.querySelector('h3 > span').innerText = data.coreografia;
-      relatedTarget.querySelector('p').innerText = data.resumen;
-
       target.closest('.shown').classList.replace('shown', 'hidden');
-      relatedTarget.classList.replace('hidden', 'shown');
+
+      if (data) {
+        relatedTarget.querySelector('h2').innerText = data.titulo;
+        relatedTarget.querySelector('h3 > span').innerText = data.coreografia;
+        relatedTarget.querySelector('p').innerText = data.resumen;
+
+        relatedTarget.classList.replace('hidden', 'shown');
+      } else {
+        document.getElementById('login-container').classList.replace('hidden', 'shown');
+      }
     });
   }
 });
