@@ -1,0 +1,12 @@
+<%= form_for(:session, url: login_path, remote: true, html: { class: 'card' }) do |form| %>
+  <%= form.label :email, class: 'label' %>
+  <%= form.email_field :email, class: 'input' %>
+  <%= form.label :password, class: 'label' %>
+  <%= form.password_field :password, class: 'input' %>
+  <%= form.label :remember_me do %>
+  <%= form.check_box :remember_me %>
+    <span>Mantener mi sesión iniciada en este equipo</span>
+  <% end %>
+  <%= form.submit %>
+  <span class="message-container">Ingrese sus credenciales</span>
+<% end %>
