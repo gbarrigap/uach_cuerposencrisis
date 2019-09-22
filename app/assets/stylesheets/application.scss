@@ -37,21 +37,21 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+}
 
-  .card {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    border: 2px solid #00000030;
-    background-color: #0000000a;
-    border-radius: 0.5rem;
-    width: 20rem;
-    margin: 1rem;
-    padding: 1rem;
+.card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  border: 2px solid #00000030;
+  background-color: #0000000a;
+  border-radius: 0.5rem;
+  width: 20rem;
+  margin: 1rem;
+  padding: 1rem;
 
-    input[type=button] {
-      width: 8rem;
-    }
+  input[type=button] {
+    width: 8rem;
   }
 }
 
@@ -223,7 +223,9 @@ body {
 
     div#login-container {
       form {
-        padding: 2rem 4rem;
+        display: flex;
+        flex-flow: wrap column;
+        row-gap: 0.5rem;
 
         button,
         label {
