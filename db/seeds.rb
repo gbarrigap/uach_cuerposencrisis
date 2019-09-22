@@ -10,12 +10,11 @@
 unless !!Repositorio.first
   repositorio = Repositorio.create
 
-  # Se crean registros para obras ssi existe un usuario al que asociarlos.
-  if !!User.first
-    user = User.first
+    user = User.first || User.create(name: 'Administrador', email: 'cuerposencrisis@gmail.com', password: 'admin')
+
     dummy_text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+
     Obra.create(titulo: 'Primera Obra', coreografia: 'Primero Coreógrafo', resumen: dummy_text, user: user)
     Obra.create(titulo: 'Segunda Obra', coreografia: 'Segundo Coreógrafo', resumen: dummy_text, user: user)
     Obra.create(titulo: 'Tercera Obra', coreografia: 'Tercer Coreógrafo', resumen: dummy_text, user: user)
-  end
 end
