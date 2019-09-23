@@ -18,7 +18,7 @@ require("channels")
 document.addEventListener("turbolinks:load", function() {
   for (const button of [...document.querySelectorAll('i.fas.nav-button:not(#nav-button-logout)')]) {
     button.addEventListener('click', (e) => {
-      document.querySelector('.shown')
+      document.querySelector('.inner-container.shown')
         .classList.replace('shown', 'hidden');
 
       document.getElementById(`${button.dataset.goto}-container`)
