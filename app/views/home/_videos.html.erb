@@ -9,11 +9,11 @@
 </div>
 <div class="thumbnails-container">
   <% @conceptos[0..2].each do |c| %>
-    <%= image_tag('https://dummyimage.com/200x100/000/fff', data: { target: '#videos-container > .video-container > .datos-container', url: url_for(c) }) %>
+    <%= image_tag("https://dummyimage.com/200x100/000/fff&text=#{c.titulo}", data: { target: '#videos-container > .video-container > .datos-container', url: url_for(c) }) %>
   <% end %>
 </div>
 <div class="thumbnails-container">
   <% @conceptos[3..6].each do |c| %>
-    <%= image_tag('https://dummyimage.com/200x100/000/fff', data: { target: '#videos-container > .video-container > .datos-container', url: url_for(c) }) %>
+    <%= image_tag("https://dummyimage.com/200x100/000/fff&text=#{c.titulo}", data: { target: '#videos-container > .video-container > .datos-container', url: url_for(c) }) %>
   <% end %>
 </div>
