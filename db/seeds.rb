@@ -14,7 +14,20 @@ unless !!Repositorio.first
 
     dummy_text = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 
-    Obra.create(titulo: 'Primera Obra', coreografia: 'Primero Coreógrafo', resumen: dummy_text, user: user)
-    Obra.create(titulo: 'Segunda Obra', coreografia: 'Segundo Coreógrafo', resumen: dummy_text, user: user)
-    Obra.create(titulo: 'Tercera Obra', coreografia: 'Tercer Coreógrafo', resumen: dummy_text, user: user)
+    obra_magnificar = Obra.create(titulo: 'Magnificar', coreografia: 'Claudia Vicuña & Alejandro Cáceres', resumen: dummy_text, user: user)
+    obra_sin_respiro = Obra.create(titulo: 'Sin Respiro', coreografia: 'Elizabeth Rodríguez', resumen: dummy_text, user: user)
+    obra_asado = Obra.create(titulo: 'Asado', coreografia: 'Francisca Sazie', resumen: dummy_text, user: user)
+
+    Concepto.create(titulo: 'Violencia Nº1')
+    Concepto.create(titulo: 'Violencia Nº2')
+
+    concepto = Concepto.create(titulo: 'Violencia Nº3')
+    Capsula.create(obra: obra_magnificar, concepto: concepto)
+    Capsula.create(obra: obra_sin_respiro, concepto: concepto)
+    Capsula.create(obra: obra_asado, concepto: concepto)
+
+    Concepto.create(titulo: 'Estereotipo')
+    Concepto.create(titulo: 'Domesticidad')
+    Concepto.create(titulo: 'Espacio')
+    Concepto.create(titulo: 'Cualidad del movimiento')
 end
