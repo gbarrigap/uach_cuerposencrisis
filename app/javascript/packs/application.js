@@ -60,4 +60,57 @@ document.addEventListener("turbolinks:load", function() {
       }
     });
   }
+
+  for (const img of [...document.querySelectorAll('#videos-container > .thumbnails-container > img')]) {
+    img.addEventListener('click', async ({
+      target
+    }) => {
+
+      const relatedTarget = document.querySelector(target.dataset.target);
+      const g = await fetch(target.dataset.url);
+      const data = await g.json();
+
+      relatedTarget.innerHTML = '';
+
+      if (data) {
+
+        const titulo = document.createElement('h2');
+
+        if (data.length) {
+
+          const video = document.createElement('video');
+
+          video.src = '/assets/violencia_3.mp4';
+          video.controls = true;
+
+          titulo.innerText = 'Archivos originales';
+
+          relatedTarget.appendChild(video);
+          relatedTarget.appendChild(titulo);
+
+          for (const obra of data) {
+
+            const tituloObra = document.createElement('h3');
+            const coreografia = document.createElement('h4');
+
+            tituloObra.innerText = obra.titulo;
+            coreografia.innerText = obra.coreografia;
+
+            relatedTarget.appendChild(tituloObra);
+            relatedTarget.appendChild(coreografia);
+          }
+        } else {
+
+          titulo.innerText = 'No existen cápsulas asociadas al concepto';
+          relatedTarget.appendChild(titulo);
+        }
+
+        relatedTarget.classList.replace('hidden', 'shown');
+
+      } else {
+        target.closest('.shown').classList.replace('shown', 'hidden');
+        document.getElementById('login-container').classList.replace('hidden', 'shown');
+      }
+    });
+  }
 });

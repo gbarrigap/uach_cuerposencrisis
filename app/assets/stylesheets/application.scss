@@ -127,6 +127,7 @@ body {
     div#prensa-container,
     div#videos-container {
       grid-template-columns: 2fr 1fr 1fr;
+      grid-gap: 1rem;
       width: 900px;
       justify-items: end;
 
@@ -142,6 +143,7 @@ body {
 
         img {
           margin: 1rem 0;
+          cursor: pointer;
 
           &:first-child {
             margin-top: 0;
@@ -149,6 +151,18 @@ body {
 
           &:last-child {
             margin-bottom: 0;
+          }
+        }
+      }
+
+      .video-container {
+        display: flex;
+        flex-flow: wrap column;
+        width: 100%;
+
+        .datos-container {
+          h3 {
+            margin-top: 1rem;
           }
         }
       }
