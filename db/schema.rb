@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_22_193010) do
+ActiveRecord::Schema.define(version: 2019_09_23_005244) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "capsulas", force: :cascade do |t|
+    t.bigint "obra_id", null: false
+    t.bigint "concepto_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["concepto_id"], name: "index_capsulas_on_concepto_id"
+    t.index ["obra_id"], name: "index_capsulas_on_obra_id"
+  end
+
+  create_table "conceptos", force: :cascade do |t|
+    t.string "titulo"
+    t.string "video_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "obras", force: :cascade do |t|
     t.string "titulo"
@@ -42,5 +58,7 @@ ActiveRecord::Schema.define(version: 2019_09_22_193010) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "capsulas", "conceptos"
+  add_foreign_key "capsulas", "obras"
   add_foreign_key "obras", "users"
 end
