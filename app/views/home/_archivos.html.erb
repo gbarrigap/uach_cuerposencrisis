@@ -9,7 +9,7 @@
       <h3>Coreografía: <%= o.coreografia %></h3>
       <h4>Reseña</h4>
       <%= simple_format(truncate(o.resumen, length: 240)) %>
-      <input type="button" value="Ver más" data-target="#archivo-container" data-url="<%= url_for(o) %>" data-id="<%= o.id %>">
+      <input type="button" value="Ver más" data-target="#archivo-container" data-url="<%= url_for(o) %>">
     </div>
   <% end %>
 </div>
