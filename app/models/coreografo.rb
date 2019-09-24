@@ -1,0 +1,2 @@
+class Coreografo < ApplicationRecord
+end
