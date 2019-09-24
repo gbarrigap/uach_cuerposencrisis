@@ -18,8 +18,12 @@ require("channels")
 document.addEventListener("turbolinks:load", function() {
   for (const button of [...document.querySelectorAll('i.fas.nav-button:not(#nav-button-logout)')]) {
     button.addEventListener('click', (e) => {
-      document.querySelector('.inner-container.shown')
-        .classList.replace('shown', 'hidden');
+
+      // Se ocultan todos los elementos que han sido mostrados,
+      // para mostrar las pantallas en su estado inicial al regresar.
+      for (const shown of [...document.querySelectorAll('.shown')]) {
+        shown.classList.replace('shown', 'hidden');
+      }
 
       document.getElementById(`${button.dataset.goto}-container`)
         .classList.replace('hidden', 'shown');
