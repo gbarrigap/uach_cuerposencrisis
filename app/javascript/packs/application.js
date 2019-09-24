@@ -113,4 +113,12 @@ document.addEventListener("turbolinks:load", function() {
       }
     });
   }
+
+  for (const img of [...document.querySelectorAll('#prensa-container > .thumbnails-container > img')]) {
+    img.addEventListener('click', async ({
+      target
+    }) => {
+      document.querySelector(target.dataset.target).classList.replace('hidden', 'shown');
+    });
+  }
 });

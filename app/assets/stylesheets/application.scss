@@ -168,6 +168,16 @@ body {
       }
     }
 
+    div#prensa-container {
+      .gallery-container {
+        .gallery {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          grid-gap: 1rem;
+          margin-top: 1rem;
+        }
+      }
+    }
+
     div#articulos-container {
       flex-flow: wrap row;
 

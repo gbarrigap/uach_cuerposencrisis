@@ -6,6 +6,7 @@ class HomeController < ApplicationController
     @user = current_user || User.new
     @obras = Obra.all
     @conceptos = Concepto.all
+    @coreografos = Coreografo.all
   end
 
 end
