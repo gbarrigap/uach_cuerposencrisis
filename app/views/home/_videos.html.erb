@@ -3,8 +3,7 @@
     <%= icon('fas', 'bars') %>
     Conceptos estudiados
   </h1>
-  <div class="datos-container hidden">
-    <%= video_tag('violencia_3.mp4', size: '640x360', controls: true) %>
+  <div class="datos-container hidden" data-video-url="<%= video_path('violencia_3.mp4') %>">
   </div>
 </div>
 <div class="thumbnails-container">

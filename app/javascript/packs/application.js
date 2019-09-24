@@ -84,7 +84,7 @@ document.addEventListener("turbolinks:load", function() {
 
           const video = document.createElement('video');
 
-          video.src = '/assets/violencia_3.mp4';
+          video.src = relatedTarget.dataset.videoUrl;
           video.controls = true;
 
           titulo.innerText = 'Archivos originales';
