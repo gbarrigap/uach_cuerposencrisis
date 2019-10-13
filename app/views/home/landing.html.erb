@@ -1,5 +1,10 @@
 <div id="main-container" class="main-container">
-  <%= icon('fas', 'home', class: 'nav-button nav-button-inicio', id: 'nav-button-inicio', data: { goto: 'inicio' }) %>
+  <div class="buttons-container">
+    <span><%= icon('fas', 'home', class: 'nav-button nav-button-home', id: 'nav-button-home', data: { goto: 'home' }) %></span>
+    <span><%= icon('fas', 'user', class: 'nav-button nav-button-perfil', id: 'nav-button-perfil', data: { goto: 'perfil' }) %></span>
+    <span><%= icon('fas', 'users', class: 'nav-button nav-button-quienes-somos', id: 'nav-button-quienes-somos', data: { goto: 'quienes-somos' }) %></span>
+    <span><%= icon('fas', 'address-book', class: 'nav-button nav-button-contacto', id: 'nav-button-contacto', data: { goto: 'contacto' }) %></span>
+  </div>
   <%= icon('fas', 'angle-up', class: 'nav-button nav-button-up', id: 'nav-button-videos', data: { goto: 'videos' }) %>
   <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-prensa', data: { goto: 'prensa' }) %>
   <div id="inicio-container" class="inner-container shown">
