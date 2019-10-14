@@ -1,12 +1,38 @@
 <div id="main-container" class="main-container">
   <div class="buttons-container">
-    <span><%= icon('fas', 'home', class: 'nav-button nav-button-home', id: 'nav-button-home', data: { goto: 'home' }) %></span>
-    <span><%= icon('fas', 'user', class: 'nav-button nav-button-perfil', id: 'nav-button-perfil', data: { goto: 'perfil' }) %></span>
-    <span><%= icon('fas', 'users', class: 'nav-button nav-button-quienes-somos', id: 'nav-button-quienes-somos', data: { goto: 'quienes-somos' }) %></span>
-    <span><%= icon('fas', 'address-book', class: 'nav-button nav-button-contacto', id: 'nav-button-contacto', data: { goto: 'contacto' }) %></span>
+    <div class="nav-button-container">
+      <span>
+        <%= icon('fas', 'home', class: 'nav-button nav-button-home', id: 'nav-button-home', data: { goto: 'home' }) %>
+        <h4>Inicio</h4>
+      </span>
+    </div>
+    <div class="nav-button-container">
+      <span>
+        <%= icon('fas', 'user', class: 'nav-button nav-button-perfil', id: 'nav-button-perfil', data: { goto: 'perfil' }) %>
+        <h4>Perfil</h4>
+      </span>
+    </div>
+    <div class="nav-button-container">
+      <span>
+        <%= icon('fas', 'users', class: 'nav-button nav-button-quienes-somos', id: 'nav-button-quienes-somos', data: { goto: 'quienes-somos' }) %>
+        <h4>Nosotros</h4>
+      </span>
+    </div>
+    <div class="nav-button-container">
+      <span>
+        <%= icon('fas', 'address-book', class: 'nav-button nav-button-contacto', id: 'nav-button-contacto', data: { goto: 'contacto' }) %>
+        <h4>Contacto</h4>
+      </span>
+    </div>
   </div>
-  <%= icon('fas', 'angle-up', class: 'nav-button nav-button-up', id: 'nav-button-videos', data: { goto: 'videos' }) %>
-  <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-prensa', data: { goto: 'prensa' }) %>
+  <div class="nav-button-container nav-button-publicaciones-container">
+    <%= icon('fas', 'angle-up', class: 'nav-button nav-button-up', id: 'nav-button-publicaciones', data: { goto: '' }) %>
+    <h2>Publicaciones</h2>
+  </div>
+  <div class="nav-button-container nav-button-metodologias-container">
+    <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-metodologias', data: { goto: '' }) %>
+    <h2>Metodologías</h2>
+  </div>
   <div id="inicio-container" class="inner-container shown">
     <%= render 'inicio' %>
   </div>
@@ -28,12 +54,21 @@
   <div id="prensa-container" class="inner-container hidden">
     <%= render 'prensa' %>
   </div>
-  <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-articulos', data: { goto: 'articulos' }) %>
-  <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-archivos', data: { goto: 'archivos' }) %>
+  <div class="nav-button-container nav-button-archivos-container">
+    <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: '' }) %>
+    <h2>Archivos</h2>
+  </div>
+  <div class="nav-button-container nav-button-proyectos-container">
+    <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-proyectos', data: { goto: '' }) %>
+    <h2>Proyectos</h2>
+  </div>
   <% if @user.id %>
-  <%= link_to icon('fas', 'sign-out-alt', class: 'nav-button nav-button-logout', id: 'nav-button-logout', data: { goto: 'logout' }),
-        logout_path, data: { confirm: 'Esta acción terminará su sesión actual. ¿Desea continuar?' }, remote: true, method: :delete %>
+    <%#= link_to icon('fas', 'sign-out-alt', class: 'nav-button nav-button-logout', id: 'nav-button-logout', data: { goto: 'logout' }),
+                logout_path,
+                data: { confirm: 'Esta acción terminará su sesión actual. ¿Desea continuar?' },
+                remote: true,
+                method: :delete %>
   <% else %>
-  <%= icon('fas', 'user', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+    <%= icon('fas', 'user', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
   <% end %>
 </div>
