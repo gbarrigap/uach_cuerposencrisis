@@ -1,15 +1,6 @@
-<h1>
-  <%= icon('fas', 'bars') %>
-  Archivos de Obras
-</h1>
-<div class="cards-container">
-  <% @obras.each do |o| %>
-    <div class="card">
-      <h2><%= o.titulo %></h2>
-      <h3>Coreografía: <%= o.coreografia %></h3>
-      <h4>Reseña</h4>
-      <%= simple_format(truncate(o.resumen, length: 240)) %>
-      <input type="button" value="Ver más" data-target="#archivo-container" data-url="<%= url_for(o) %>">
-    </div>
-  <% end %>
-</div>
+<% (1..2).each.with_index(0) do |image, index| %>
+  <div class="button with-text">
+    <%= image_tag('https://dummyimage.com/150x150/ccc/fff', class: 'highlight') %>
+    <h2><%= ['Prensa', 'Audiovisual'][index] %></h2>
+  </div>
+<% end %>
