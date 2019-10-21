@@ -16,7 +16,7 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener("turbolinks:load", function() {
-  for (const button of [...document.querySelectorAll('i.fas.nav-button:not(#nav-button-logout)')]) {
+  for (const button of [...document.querySelectorAll('.nav-button:not(#nav-button-logout)')]) {
     button.addEventListener('click', (e) => {
 
       // Se ocultan todos los elementos que han sido mostrados,
