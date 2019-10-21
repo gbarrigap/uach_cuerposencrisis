@@ -30,7 +30,7 @@
 }
 
 .shown {
-  display: flex;
+  display: grid;
 }
 
 .cards-container {
@@ -344,14 +344,13 @@ body {
 
     div#archivos-container,
     div#publicaciones-container {
-      // grid-template-columns: 1fr 1fr 1fr;
-      // grid-gap: 4rem;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-gap: 4rem;
 
       .button.with-text {
         display: flex;
         flex-flow: column wrap;
         align-items: center;
-        padding: 2rem;
 
         img {
           &.highlight {
