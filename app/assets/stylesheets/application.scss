@@ -121,6 +121,14 @@ body {
       }
     }
 
+    .titulo-seccion {
+      grid-column: 6/8;
+      align-self: center;
+      justify-self: flex-end;
+      display: flex;
+      margin-right: 5rem;
+    }
+
     i.nav-button {
       margin: 1rem;
       width: 5rem;

@@ -27,6 +27,9 @@ document.addEventListener("turbolinks:load", function() {
 
       document.getElementById(`${button.dataset.goto}-container`)
         .classList.replace('hidden', 'shown');
+
+      document.querySelector('.titulo-seccion').innerText =
+        button.dataset.titulo || '';
     });
   }
 
