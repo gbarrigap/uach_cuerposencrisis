@@ -342,6 +342,35 @@ body {
       }
     }
 
+    div#publicaciones-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 4rem;
+
+      .button.with-text {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+
+        img {
+          &.highlight {
+            border: 0.75rem #a8a8a8 solid;
+            border-radius: 50%;
+            padding: 0.25rem;
+            cursor: pointer;
+            transition: border-color 350ms;
+            margin-bottom: 1rem;
+
+            &:hover {
+              padding: 0;
+              border-width: 1rem;
+              border-color: #757575;
+            }
+          }
+        }
+      }
+    }
+
     div#prensa-container,
     div#videos-container {
       grid-template-columns: 2fr 1fr 1fr;

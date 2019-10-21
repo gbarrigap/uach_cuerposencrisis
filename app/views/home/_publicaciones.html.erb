@@ -1,0 +1,6 @@
+<% (1..3).each.with_index(0) do |image, index| %>
+  <div class="button with-text">
+    <%= image_tag('https://dummyimage.com/150x150/ccc/fff', class: 'highlight') %>
+    <h2><%= ['Artículos', 'Ponencias', 'Audiovisuales'][index] %></h2>
+  </div>
+<% end %>
