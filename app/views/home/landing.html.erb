@@ -29,10 +29,10 @@
     <%= icon('fas', 'angle-up', class: 'nav-button nav-button-up', id: 'nav-button-publicaciones', data: { goto: '' }) %>
     <h2>Publicaciones</h2>
   </div>
-  <div class="nav-button-container nav-button-metodologias-container">
-    <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-metodologias', data: { goto: '' }) %>
-    <h2>Metodologías</h2>
   <h1 class="titulo-seccion"></h1>
+  <div class="nav-button-container nav-button-proyectos-container">
+    <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-proyectos', data: { goto: 'proyectos', titulo: 'Proyectos' }) %>
+    <h2>Proyectos</h2>
   </div>
   <div id="inicio-container" class="inner-container shown">
     <%= render 'inicio' %>
@@ -58,6 +58,9 @@
   <div id="quienes-somos-container" class="inner-container hidden">
     <%= render 'quienes_somos' %>
   </div>
+  <div id="proyectos-container" class="inner-container hidden">
+    <%= render 'proyectos' %>
+  </div>
   <div class="nav-button-container nav-button-archivos-container">
     <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: '' }) %>
     <h2>Archivos</h2>
@@ -66,10 +69,6 @@
     <%= image_tag '01_mcap.svg' %>
     <%= image_tag '02_uach.svg' %>
     <%= image_tag '03_facultad.svg' %>
-  </div>
-  <div class="nav-button-container nav-button-proyectos-container">
-    <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-proyectos', data: { goto: '' }) %>
-    <h2>Proyectos</h2>
   </div>
   <% if @user.id %>
     <%#= link_to icon('fas', 'sign-out-alt', class: 'nav-button nav-button-logout', id: 'nav-button-logout', data: { goto: 'logout' }),
