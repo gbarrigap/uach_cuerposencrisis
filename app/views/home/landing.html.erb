@@ -29,7 +29,10 @@
     <%= icon('fas', 'angle-up', class: 'nav-button nav-button-up', id: 'nav-button-publicaciones', data: { goto: 'publicaciones', titulo: 'Publicaciones' }) %>
     <h2>Publicaciones</h2>
   </div>
-  <h1 class="titulo-seccion"></h1>
+  <div class="titulo">
+    <h1 class="titulo-seccion"></h1>
+    <h2 class="subtitulo-seccion"></h2>
+  </div>
   <div class="nav-button-container nav-button-proyectos-container">
     <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-proyectos', data: { goto: 'proyectos', titulo: 'Proyectos' }) %>
     <h2>Proyectos</h2>
@@ -63,6 +66,9 @@
   </div>
   <div id="publicaciones-container" class="inner-container hidden">
     <%= render 'publicaciones' %>
+  </div>
+  <div id="publicaciones-audiovisuales-container" class="inner-container hidden">
+    <%= render 'publicaciones_audiovisuales' %>
   </div>
   <div class="nav-button-container nav-button-archivos-container">
     <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: 'archivos', titulo: 'Archivos' }) %>

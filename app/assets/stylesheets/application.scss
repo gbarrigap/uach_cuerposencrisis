@@ -121,12 +121,17 @@ body {
       }
     }
 
-    .titulo-seccion {
+    .titulo {
       grid-column: 6/8;
       align-self: center;
       justify-self: flex-end;
       display: flex;
+      flex-direction: column;
       margin-right: 5rem;
+
+      h1 {
+        margin-left: 2rem;
+      }
     }
 
     i.nav-button {

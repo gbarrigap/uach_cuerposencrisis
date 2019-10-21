@@ -30,6 +30,9 @@ document.addEventListener("turbolinks:load", function() {
 
       document.querySelector('.titulo-seccion').innerText =
         button.dataset.titulo || '';
+
+      document.querySelector('.subtitulo-seccion').innerText =
+        button.dataset.subtitulo || '';
     });
   }
 
