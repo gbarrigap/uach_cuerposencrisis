@@ -397,6 +397,28 @@ body {
       }
     }
 
+    div#publicaciones-audiovisuales-container {
+      grid-template-columns: repeat(7, 1fr);
+      grid-gap: 1rem;
+      justify-items: center;
+
+      video {
+        grid-column: 1/6;
+      }
+
+      div {
+        &.card {
+          grid-column: 6/8;
+          width: 100%;
+          margin: 0;
+        }
+
+        &.button {
+          grid-row: 2;
+        }
+      }
+    }
+
     div#prensa-container,
     div#videos-container {
       grid-template-columns: 2fr 1fr 1fr;

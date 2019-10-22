@@ -1,0 +1,9 @@
+<%= video_tag('violencia_3.mp4', size: '640x360', controls: true) %>
+<div class="card">
+  <h2>Ficha Técnica</h2>
+</div>
+<% (1..7).each.with_index(0) do |image, index| %>
+  <div class="button">
+    <%= image_tag('https://dummyimage.com/100x100/fff/000?text=TEXTO', class: 'button nav-button highlight circle') %>
+  </div>
+<% end %>
