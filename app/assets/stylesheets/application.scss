@@ -16,6 +16,7 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro:500&display=swap');
 
 *,
 *::after,
@@ -23,6 +24,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Advent Pro', sans-serif;
 }
 
 .hidden {
@@ -378,7 +388,9 @@ body {
         flex-flow: column wrap;
         align-items: center;
 
-        img { // todo: Usar estilo centralizado!
+        img {
+          // todo: Usar estilo centralizado!
+
           &.highlight {
             border: 0.75rem #a8a8a8 solid;
             border-radius: 50%;
