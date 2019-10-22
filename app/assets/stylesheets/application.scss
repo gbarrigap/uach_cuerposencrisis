@@ -17,6 +17,7 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro:500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200&display=swap');
 
 *,
 *::after,
@@ -33,6 +34,10 @@ h4,
 h5,
 h6 {
   font-family: 'Advent Pro', sans-serif;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
 }
 
 .hidden {
@@ -390,7 +395,6 @@ body {
 
         img {
           // todo: Usar estilo centralizado!
-
           &.highlight {
             border: 0.75rem #a8a8a8 solid;
             border-radius: 50%;
