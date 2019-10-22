@@ -1,6 +1,10 @@
-<% { articulos: 'Artículos', ponencias: 'Ponencias', audiovisuales: 'Audiovisuales'}.each do |k, v| %>
+<% { articulos: 'Artículos',
+     ponencias: 'Ponencias',
+     audiovisuales: 'Audiovisuales',
+   }.each do |k, v| %>
+
   <div class="button with-text">
-    <%= image_tag('https://dummyimage.com/150x150/ccc/fff', class: 'nav-button highlight', data: { goto: "publicaciones-#{k}" }) %>
+    <%= image_tag('https://dummyimage.com/150x150/ccc/fff', class: 'nav-button highlight', data: { goto: "publicaciones-#{k}", titulo: 'Publicaciones', subtitulo: v , }) %>
     <h2><%= v %></h2>
   </div>
 <% end %>
