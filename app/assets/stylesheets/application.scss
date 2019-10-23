@@ -343,7 +343,8 @@ body {
       }
     }
 
-    div#publicaciones-articulos-container {
+    div#publicaciones-articulos-container,
+    div#publicaciones-ponencias-container {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
       grid-gap: 1rem;
       width: 100%;
