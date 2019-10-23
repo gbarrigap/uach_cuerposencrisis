@@ -343,6 +343,16 @@ body {
       }
     }
 
+    div#publicaciones-articulos-container {
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      grid-gap: 1rem;
+      width: 100%;
+
+      div.card {
+        height: 20rem;
+      }
+    }
+
     div#prensa-container,
     div#videos-container {
       grid-template-columns: 2fr 1fr 1fr;
