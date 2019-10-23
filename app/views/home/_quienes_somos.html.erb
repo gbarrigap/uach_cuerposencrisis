@@ -1,6 +1,6 @@
 <div class="thumbnails">
   <% (1..6).each.with_index(1) do |img, index| %>
-    <%= image_tag('https://dummyimage.com/120x120/ccc/fff', class: "img-#{index} highlight") %>
+    <%= image_tag('https://dummyimage.com/120x120/ccc/fff', class: "img-#{index} button #{'circle' if index != 5} highlight") %>
   <% end %>
 </div>
 <div class="card highlight">

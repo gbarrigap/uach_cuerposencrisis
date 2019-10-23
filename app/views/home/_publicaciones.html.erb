@@ -3,8 +3,8 @@
      audiovisuales: 'Audiovisuales',
    }.each do |k, v| %>
 
-  <div class="button with-text">
-    <%= image_tag('https://dummyimage.com/150x150/ccc/fff', class: 'nav-button highlight', data: { goto: "publicaciones-#{k}", titulo: 'Publicaciones', subtitulo: v , }) %>
+  <div class="with-text">
+    <%= image_tag('https://dummyimage.com/150x150/ccc/fff', class: 'nav-button button circle highlight', data: { goto: "publicaciones-#{k}", titulo: 'Publicaciones', subtitulo: v , }) %>
     <h2><%= v %></h2>
   </div>
 <% end %>
