@@ -6,12 +6,14 @@
         <h4>Inicio</h4>
       </span>
     </div>
+    <% if @user.id %>
     <div class="nav-button-container">
       <span>
         <%= icon('fas', 'user', class: 'nav-button nav-button-perfil', id: 'nav-button-perfil', data: { goto: 'perfil' }) %>
         <h4>Perfil</h4>
       </span>
     </div>
+    <% end %>
     <div class="nav-button-container">
       <span>
         <%= icon('fas', 'users', class: 'nav-button nav-button-quienes-somos', id: 'nav-button-quienes-somos', data: { goto: 'quienes-somos' }) %>
@@ -22,6 +24,19 @@
       <span>
         <%= icon('fas', 'address-book', class: 'nav-button nav-button-contacto', id: 'nav-button-contacto', data: { goto: 'contacto' }) %>
         <h4>Contacto</h4>
+      </span>
+    </div>
+    <div class="nav-button-container">
+      <span>
+        <% if @user.id %>
+        <%= link_to icon('fas', 'sign-out-alt', class: 'nav-button nav-button-logout', id: 'nav-button-logout', data: { goto: 'logout' }),
+                      logout_path,
+                      data: { confirm: 'Esta acción terminará su sesión actual. ¿Desea continuar?' },
+                      remote: true,
+                      method: :delete %>
+        <% else %>
+        <%= icon('fas', 'sign-in-alt', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+        <% end %>
       </span>
     </div>
   </div>
@@ -61,6 +76,9 @@
   <div id="login-container" class="inner-container hidden">
     <%= render 'login' %>
   </div>
+  <div id="perfil-container" class="inner-container hidden">
+    <%= render 'perfil' %>
+  </div>
   <div id="prensa-container" class="inner-container hidden">
     <%= render 'prensa' %>
   </div>
@@ -95,13 +113,4 @@
     <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-proyectos', data: { goto: 'proyectos', titulo: 'Proyectos' }) %>
     <h2>Proyectos</h2>
   </div>
-  <% if @user.id %>
-    <%#= link_to icon('fas', 'sign-out-alt', class: 'nav-button nav-button-logout', id: 'nav-button-logout', data: { goto: 'logout' }),
-                logout_path,
-                data: { confirm: 'Esta acción terminará su sesión actual. ¿Desea continuar?' },
-                remote: true,
-                method: :delete %>
-  <% else %>
-    <%= icon('fas', 'user', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
-  <% end %>
 </div>

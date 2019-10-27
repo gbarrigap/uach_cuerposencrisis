@@ -125,6 +125,7 @@ body {
       span {
         align-self: center;
 
+        a > i,
         i {
           font-size: 2rem;
           width: 100%;
@@ -134,11 +135,11 @@ body {
           border: 1px solid white;
           border-radius: 0.5rem;
           margin: 1rem 0 0;
+        }
 
-          &:hover {
-            & + h4 {
-              opacity: 1;
-            }
+        a {
+          i {
+            margin: '0';
           }
         }
 
@@ -147,6 +148,12 @@ body {
           text-align: center;
         }
       }
+    }
+
+    #nav-button-login,
+    #nav-button-logout {
+      margin: 0;
+      color: black;
     }
 
     .titulo {
@@ -509,25 +516,22 @@ body {
       align-self: end;
       justify-self: end;
     }
-
-    #nav-button-login,
-    #nav-button-logout {
-      grid-row: 3;
-      grid-column: 4;
-      align-self: end;
-      justify-self: end;
-      font-size: 2rem;
-      color: green;
-      width: 4rem;
-      height: 4rem;
-      padding-top: 0.75rem;
-      opacity: 0;
-
-      &:hover {
-        opacity: 1;
-      }
-    }
-
+    // #nav-button-login,
+    // #nav-button-logout {
+    //   grid-row: 3;
+    //   grid-column: 7;
+    //   align-self: end;
+    //   justify-self: end;
+    //   font-size: 2rem;
+    //   color: green;
+    //   width: 4rem;
+    //   height: 4rem;
+    //   padding-top: 0.75rem;
+    //
+    //   &:hover {
+    //     opacity: 1;
+    //   }
+    // }
     div#logos-container {
       grid-column: 1/4;
       grid-row: 3;
