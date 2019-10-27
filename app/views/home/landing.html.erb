@@ -54,7 +54,7 @@
     <%= icon('fas', 'angle-left', class: 'nav-button nav-button-left', id: 'nav-button-metodologias', data: { goto: 'metodologias', titulo: 'Metodologías' }) %>
     <h2>Metodologías</h2>
   </div>
-  <div id="inicio-container" class="inner-container shown">
+  <div id="inicio-container" class="inner-container hidden">
     <%= render 'inicio' %>
   </div>
   <div id="videos-container" class="inner-container hidden">
@@ -117,11 +117,11 @@
   <div id="metodologias-metodologia_2-container" class="inner-container hidden">
     <%= render 'metodologias_2' %>
   </div>
-  <div class="nav-button-container nav-button-archivos-container">
+  <div class="nav-button-container nav-button-archivos-container hidden">
     <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: 'archivos', titulo: 'Archivos' }) %>
     <h2>Archivos</h2>
   </div>
-  <div class="nav-button-container nav-button-proyectos-container">
+  <div class="nav-button-container nav-button-proyectos-container hidden">
     <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-proyectos', data: { goto: 'proyectos', titulo: 'Proyectos' }) %>
     <h2>Proyectos</h2>
   </div>
