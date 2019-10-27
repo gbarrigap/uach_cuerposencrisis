@@ -131,4 +131,19 @@ document.addEventListener("turbolinks:load", function() {
       document.querySelector(target.dataset.target).classList.replace('hidden', 'shown');
     });
   }
+
+  for (const button of [...document.querySelectorAll('#publicaciones-audiovisuales-container .command-button')]) {
+    button.addEventListener('click', async ({ target }) => {
+      const g = await fetch('/media/datos');
+      const data = await g.json();
+      if (data) {
+        document.querySelector('#publicaciones-audiovisuales-container .video-container').classList.replace('hidden', 'shown');
+        document.querySelector('#publicaciones-audiovisuales-container video').src = data;
+      }
+      else {
+        target.closest('.shown').classList.replace('shown', 'hidden');
+        document.getElementById('login-container').classList.replace('hidden', 'shown');
+      }
+    });
+  }
 });

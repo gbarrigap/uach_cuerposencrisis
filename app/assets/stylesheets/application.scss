@@ -351,20 +351,28 @@ body {
       grid-gap: 1rem;
       justify-items: center;
 
-      video {
-        grid-column: 1/6;
+      div {
+        grid-row: 1;
+        grid-column: 1/8;
+
+        a {
+          margin-left: 2rem;
+          align-self: center;
+          text-decoration: none;
+          color: black;
+          opacity: 0.8;
+          transition: opacity 150ms;
+          grid-column: 2;
+          grid-row: 1;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
       }
 
-      div {
-        &.card {
-          grid-column: 6/8;
-          width: 100%;
-          margin: 0;
-        }
-
-        &.button {
-          grid-row: 2;
-        }
+      img {
+        grid-row: 2;
       }
     }
 
@@ -519,6 +527,8 @@ body {
         display: flex;
         flex-flow: wrap column;
         row-gap: 0.5rem;
+        opacity: 1;
+        padding: 5rem 10rem;
 
         button,
         label {

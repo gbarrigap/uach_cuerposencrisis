@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
 
+  get '/media/datos', to: 'media#datos', as: :datos_media
+
   resources :obras, only: [:show]
   resources :conceptos, only: [:show]
 

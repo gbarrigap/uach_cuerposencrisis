@@ -1,9 +1,7 @@
-<%= video_tag('', size: '640x360', poster: 'https://dummyimage.com/640x360/eee/222?text=VIDEO') %>
-<div class="card">
-  <h2>Ficha Técnica</h2>
+<div class="video-container hidden">
+  <%= video_tag('', size: '640x360', controls: true) %>
+  <%= link_to icon('fas', 'file-pdf', 'Descargar ficha técnica'), '/pdf/ficha-tecnica.pdf' %>
 </div>
 <% (1..7).each.with_index(0) do |image, index| %>
-  <div class="button">
-    <%= image_tag('https://dummyimage.com/100x100/fff/000?text=TEXTO', class: 'button nav-button highlight circle') %>
-  </div>
+<%= image_tag('https://dummyimage.com/100x100/fff/000?text=TEXTO', class: 'button command-button highlight circle') %>
 <% end %>
