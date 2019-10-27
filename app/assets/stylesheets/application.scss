@@ -72,6 +72,10 @@ p {
   input[type=button] {
     width: 8rem;
   }
+
+  &.command {
+    cursor: pointer;
+  }
 }
 
 .error {
@@ -439,6 +443,52 @@ body {
           div.card {
             opacity: 1;
           }
+        }
+      }
+    }
+
+    div#publicaciones-articulos-container,
+    div#publicaciones-ponencias-container {
+      div.card {
+        display: grid;
+        height: 20rem;
+        width: 15rem;
+        padding: 1rem;
+
+        i {
+          font-size: 2rem;
+          align-self: flex-end;
+        }
+
+        a {
+          grid-column: 1;
+          text-decoration: none;
+          color: black;
+          opacity: 0.8;
+          transition: opacity 150ms;
+
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      &#publicaciones-articulos-container {
+        .card {
+          grid-template-rows: 2rem 2rem 2rem 2rem 1fr;
+
+          a {
+            grid-row: 5;
+          }
+        }
+      }
+
+      &#publicaciones-ponencias-container {
+        .card {
+          a {
+            grid-row: 6;
+          }
+          grid-template-rows: 2rem 2rem 2rem 2rem 2rem 1fr;
         }
       }
     }

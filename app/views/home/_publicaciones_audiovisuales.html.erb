@@ -1,6 +1,6 @@
 <div class="video-container hidden">
   <%= video_tag('', size: '640x360', controls: true) %>
-  <%= link_to icon('fas', 'file-pdf', 'Descargar ficha técnica'), '/pdf/ficha-tecnica.pdf' %>
+  <%= link_to icon('fas', 'file-pdf', 'Descargar ficha técnica'), '/assets/Ficha.pdf', target: '_blank' %>
 </div>
 <% (1..7).each.with_index(0) do |image, index| %>
 <%= image_tag('https://dummyimage.com/100x100/fff/000?text=TEXTO', class: 'button command-button highlight circle') %>

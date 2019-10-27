@@ -1,8 +1,13 @@
 <% (1..4).each do |i| %>
-<div class="card">
-  <h2>Titulo</h2>
-  <p>Autor(es)</p>
-  <p>Año</p>
-  <p>Reseña</p>
-</div>
+  <div class="card">
+    <h2>Titulo</h2>
+    <p>Autor(es)</p>
+    <p>Año</p>
+    <p>Reseña</p>
+    <% if !!current_user %>
+      <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
+    <% else %>
+      <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+    <% end %>
+  </div>
 <% end %>
