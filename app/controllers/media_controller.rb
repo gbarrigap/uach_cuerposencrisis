@@ -7,4 +7,11 @@ class MediaController < ApplicationController
     end
   end
 
+  def pdf
+    data = !!current_user ? '"/assets/Ficha.pdf"' : false
+    respond_to do |format|
+      format.json { render json: data }
+    end
+  end
+
 end
