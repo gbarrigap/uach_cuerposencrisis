@@ -350,6 +350,7 @@ body {
     }
 
     div#archivos-container,
+    div#metodologias-container,
     div#publicaciones-container {
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       grid-gap: 4rem;
@@ -393,6 +394,8 @@ body {
 
     div#archivos-audiovisual-container,
     div#archivos-prensa-container,
+    div#metodologias-metodologia_1-container,
+    div#metodologias-metodologia_2-container,
     div#publicaciones-articulos-container,
     div#publicaciones-ponencias-container {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
