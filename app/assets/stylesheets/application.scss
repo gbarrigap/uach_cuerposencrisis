@@ -304,14 +304,24 @@ body {
     }
 
     div#proyectos-container {
-      grid-template-columns: 1fr 1fr 3fr;
+      grid-template-columns: 1.5fr 1fr 2fr;
       grid-gap: 4rem;
+      justify-items: center;
 
       div.logos,
       div.thumbnails {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 1rem;
+      }
+
+      div.logos {
+        width: 100%;
+        grid-gap: 3rem;
+
+        img {
+          width: 100%;
+        }
       }
 
       div.info {
@@ -364,7 +374,6 @@ body {
     div#publicaciones-ponencias-container {
       grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
       grid-gap: 1rem;
-      width: 100%;
 
       div:not(.card) {
         display: grid;
