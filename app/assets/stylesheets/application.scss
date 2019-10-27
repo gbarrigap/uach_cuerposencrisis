@@ -209,13 +209,16 @@ body {
       align-self: center;
       justify-self: center;
 
-      h2 {
+      h2,
+      h4 {
         text-align: center;
         opacity: 0;
       }
 
+      a:hover,
       i:hover {
-        & + h2 {
+        & + h2,
+        & + h4 {
           opacity: 1;
         }
       }

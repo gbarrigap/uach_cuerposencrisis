@@ -34,8 +34,10 @@
                       data: { confirm: 'Esta acción terminará su sesión actual. ¿Desea continuar?' },
                       remote: true,
                       method: :delete %>
+        <h4>Salir</h4>
         <% else %>
         <%= icon('fas', 'sign-in-alt', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+        <h4>Ingresar</h4>
         <% end %>
       </span>
     </div>
