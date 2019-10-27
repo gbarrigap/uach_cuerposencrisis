@@ -62,6 +62,12 @@ p {
   background-color: white;
   border-radius: 0.5rem;
   padding: 0.125rem;
+  opacity: 0;
+  transition: opacity 150ms ease-in-out;
+
+  &:hover {
+    opacity: 1;
+  }
 
   input[type=button] {
     width: 8rem;
