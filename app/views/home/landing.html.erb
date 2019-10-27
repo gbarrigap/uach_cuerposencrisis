@@ -22,7 +22,7 @@
     </div>
     <div class="nav-button-container">
       <span>
-        <%= icon('fas', 'address-book', class: 'nav-button nav-button-contacto', id: 'nav-button-contacto', data: { goto: 'contacto' }) %>
+        <%= icon('fas', 'address-book', class: 'nav-button nav-button-contacto', id: 'nav-button-contacto', data: { goto: 'contacto', titulo: 'Contacto' }) %>
         <h4>Contacto</h4>
       </span>
     </div>
@@ -102,6 +102,9 @@
   </div>
   <div id="home-container" class="inner-container shown">
     <%= render 'home' %>
+  </div>
+  <div id="contacto-container" class="inner-container hidden">
+    <%= render 'contacto' %>
   </div>
   <div class="nav-button-container nav-button-archivos-container">
     <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: 'archivos', titulo: 'Archivos' }) %>
