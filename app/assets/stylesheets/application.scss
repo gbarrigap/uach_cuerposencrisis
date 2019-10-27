@@ -294,19 +294,22 @@ body {
         }
       }
 
-      div.card {
-        display: flex;
-        flex-flow: column;
+      div.card-container {
+        div.card {
+          display: flex;
+          flex-flow: column;
+          opacity: 1;
 
-        div {
-          &.card-image {
-            img {
-              width: 100%;
+          div {
+            &.card-image {
+              img {
+                width: 100%;
+              }
             }
-          }
 
-          &.card-body {
-            margin: 1rem;
+            &.card-body {
+              margin: 1rem;
+            }
           }
         }
       }

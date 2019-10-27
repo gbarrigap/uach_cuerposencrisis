@@ -146,4 +146,11 @@ document.addEventListener("turbolinks:load", function() {
       }
     });
   }
+
+  for (const button of [...document.querySelectorAll('#quienes-somos-container .command-button')]) {
+    button.addEventListener('click', async ({ target }) => {
+      console.log({target});
+      document.querySelector('.card-container').classList.replace('hidden', 'shown');
+    });
+  }
 });
