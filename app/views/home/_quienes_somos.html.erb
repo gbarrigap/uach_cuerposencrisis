@@ -1,7 +1,8 @@
 <div class="thumbnails">
-  <% (1..6).each.with_index(1) do |img, index| %>
-    <%= image_tag('https://dummyimage.com/120x120/ccc/fff', class: "img-#{index} button command-button #{'circle' if index != 5} highlight") %>
+  <% (1..5).each.with_index(1) do |img, index| %>
+    <%= image_tag('https://dummyimage.com/120x120/ccc/fff', class: "img-#{index} button command-button circle highlight") %>
   <% end %>
+  <%= image_tag('undraw_social_girl_562b.svg', class: 'img-6 highlight') %>
 </div>
 <div class="card-container hidden">
   <div class="card highlight">
