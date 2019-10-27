@@ -532,18 +532,19 @@ body {
     //     opacity: 1;
     //   }
     // }
-    div#logos-container {
-      grid-column: 1/4;
-      grid-row: 3;
+    div#home-container {
       width: 100%;
-      display: flex;
-      flex-flow: wrap row;
-      justify-content: space-evenly;
-      opacity: 0;
-      transition: opacity 150ms;
+      grid-template-columns: repeat(3, 1fr);
+      cursor: crosshair;
 
-      &:hover {
-        opacity: 1;
+      img {
+        opacity: 0;
+        width: 100%;
+        transition: opacity 150ms ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
       }
     }
   }

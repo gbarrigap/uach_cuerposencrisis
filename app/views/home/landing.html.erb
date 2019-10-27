@@ -100,14 +100,12 @@
   <div id="publicaciones-ponencias-container" class="inner-container hidden">
     <%= render 'publicaciones_ponencias' %>
   </div>
+  <div id="home-container" class="inner-container shown">
+    <%= render 'home' %>
+  </div>
   <div class="nav-button-container nav-button-archivos-container">
     <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: 'archivos', titulo: 'Archivos' }) %>
     <h2>Archivos</h2>
-  </div>
-  <div id="logos-container">
-    <%= image_tag '01_mcap.svg' %>
-    <%= image_tag '02_uach.svg' %>
-    <%= image_tag '03_facultad.svg' %>
   </div>
   <div class="nav-button-container nav-button-proyectos-container">
     <%= icon('fas', 'angle-down', class: 'nav-button nav-button-down', id: 'nav-button-proyectos', data: { goto: 'proyectos', titulo: 'Proyectos' }) %>
