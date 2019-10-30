@@ -316,6 +316,10 @@ body {
 
             &.card-body {
               margin: 1rem;
+
+              p:first-child {
+                font-weight: bold;
+              }
             }
           }
         }

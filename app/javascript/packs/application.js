@@ -16,6 +16,20 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 document.addEventListener("turbolinks:load", function() {
+
+  document.querySelector('#login-container > form')
+    .addEventListener('ajax:success', ({
+      target,
+      detail
+    }) => {
+      const response = detail[0];
+      const messageContainer = target.querySelector('.message-container');
+      if (!response) {
+        messageContainer.classList.add('error');
+        messageContainer.innerText = 'Las credenciales ingresadas son incorrectas';
+      }
+    });
+
   for (const button of [...document.querySelectorAll('.nav-button:not(#nav-button-logout)')]) {
     button.addEventListener('click', (e) => {
 
@@ -35,19 +49,6 @@ document.addEventListener("turbolinks:load", function() {
         button.dataset.subtitulo || '';
     });
   }
-
-  document.querySelector('#login-container > form')
-    .addEventListener('ajax:success', ({
-      target,
-      detail
-    }) => {
-      const response = detail[0];
-      const messageContainer = target.querySelector('.message-container');
-      if (!response) {
-        messageContainer.classList.add('error');
-        messageContainer.innerText = 'Las credenciales ingresadas son incorrectas';
-      }
-    });
 
   for (const button of [...document.querySelectorAll('.card > input[type=button]')]) {
     button.addEventListener('click', async ({
@@ -133,14 +134,15 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   for (const button of [...document.querySelectorAll('#publicaciones-audiovisuales-container .command-button')]) {
-    button.addEventListener('click', async ({ target }) => {
+    button.addEventListener('click', async ({
+      target
+    }) => {
       const g = await fetch('/media/datos');
       const data = await g.json();
       if (data) {
         document.querySelector('#publicaciones-audiovisuales-container .video-container').classList.replace('hidden', 'shown');
         document.querySelector('#publicaciones-audiovisuales-container video').src = data;
-      }
-      else {
+      } else {
         target.closest('.shown').classList.replace('shown', 'hidden');
         document.getElementById('login-container').classList.replace('hidden', 'shown');
       }
@@ -148,8 +150,19 @@ document.addEventListener("turbolinks:load", function() {
   }
 
   for (const button of [...document.querySelectorAll('#quienes-somos-container .command-button')]) {
-    button.addEventListener('click', async ({ target }) => {
-      console.log({target});
+    button.addEventListener('click', async ({
+      target
+    }) => {
+
+      const cardBody = document.querySelector('#quienes-somos-container .card-body');
+      cardBody.innerHTML = null;
+
+      for (const line of Object.entries(target.dataset).map(x => x[1])) {
+        const e = document.createElement(line === 'Intereses' ? 'h3' : 'p');
+        e.innerText = line;
+        cardBody.appendChild(e);
+      }
+
       document.querySelector('.card-container').classList.replace('hidden', 'shown');
     });
   }

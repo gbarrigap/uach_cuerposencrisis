@@ -1,7 +1,47 @@
 <div class="thumbnails">
-  <% (1..5).each.with_index(1) do |img, index| %>
-    <%= image_tag('https://dummyimage.com/120x120/ccc/fff', class: "img-#{index} button command-button circle highlight") %>
-  <% end %>
+  <%= image_tag('https://dummyimage.com/120x120/ccc/fff',
+                class: 'img-1 button command-button circle highlight',
+                data: {
+                  linea_1: 'Marcela Carolina Hurtado Rubio',
+                  linea_2: 'Arquitecta',
+                  linea_3: 'Dr. en Ciencias Humanas, mención Discurso y Cultura',
+                  linea_4: 'Académica Facultad de Arquitectura y Artes',
+                  linea_5: 'Directora del Departamento de Creación Artística – VIDCA',
+                  linea_6: 'Universidad Austral de Chile',
+                  linea_7: 'Intereses',
+                  linea_8: 'xxxx',
+                }) %>
+
+  <%= image_tag('https://dummyimage.com/120x120/ccc/fff',
+                class: 'img-2 button command-button circle highlight',
+                data: {
+                  linea_1: 'Rodrigo Francisco Browne Sartori',
+                  linea_2: 'Periodista',
+                  linea_3: 'Dr. en Estudios Culturales-Literatura y Comunicación',
+                  linea_4: 'Académico Facultad de Filosofía y Humanidades',
+                  linea_5: 'Director de Estudios de Postgrado',
+                  linea_6: 'Universidad Austral de Chile',
+                  linea_7: 'Intereses',
+                  linea_8: 'Comunicación y Cultura.',
+                  linea_9: 'Teorías de la Comunicación.',
+                  linea_10: 'Comunicación.',
+                  linea_11: 'Periodismo intercultural.',
+                }) %>
+
+  <%= image_tag('https://dummyimage.com/120x120/ccc/fff',
+                class: 'img-3 button command-button circle highlight',
+                data: {
+                  linea_1: 'Katherine Barriga Placencia',
+                  linea_2: 'Comunicadora Audiovisual',
+                  linea_3: 'Magister en Desarrollo Rural',
+                  linea_4: 'Gestora de Proyectos de Creación Artística - VIDCA',
+                  linea_5: 'Universidad Austral de Chile',
+                  linea_6: 'Intereses',
+                  linea_7: 'Cuerpo y territorios ',
+                  linea_8: 'No-ciudad y lo rural',
+                  linea_9: 'Comunicación y desarrollos',
+                  linea_10: 'Archivo y memoria',
+                }) %>
 </div>
 <div class="card-container hidden">
   <div class="card highlight">
@@ -9,12 +49,6 @@
       <%= image_tag('https://dummyimage.com/400x300/ccc/fff') %>
     </div>
     <div class="card-body">
-      <p>Marcela Hurtado Rubio</p>
-      <p>Arquitecta</p>
-      <p>Dra. en Humanidades, mención Discurso</p>
-      <p>Reseña: intereses xxxx xxxxx</p>
-      <p>xxxxx</p>
-      <p>xxxxxx</p>
     </div>
   </div>
 </div>
