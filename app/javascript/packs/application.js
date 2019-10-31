@@ -154,30 +154,36 @@ document.addEventListener("turbolinks:load", function() {
       target
     }) => {
 
-      const cardBody = document.querySelector('#quienes-somos-container .card-body');
+      const card = document.querySelector('#quienes-somos-container > .card');
+      const cardBody = card.querySelector('.card-body');
       const infoContainer = cardBody.querySelector('.info');
       const linksContainer = cardBody.querySelector('.links');
+
       const pdfAnchor = document.createElement('a');
       const pdfAnchorIcon = document.createElement('i')
 
-      infoContainer.innerHTML = null;
-      linksContainer.innerHTML = null;
-      pdfAnchor.href = '/assets/Ficha.pdf';
-      pdfAnchor.target = '_blank';
-      pdfAnchor.classList.add('link-with-icon');
-      pdfAnchorIcon.classList.add('fas', 'fa-file-pdf');
+      await card.classList.replace('opaque', 'transparent');
 
-      pdfAnchor.appendChild(pdfAnchorIcon);
+      window.setTimeout(() => {
+        infoContainer.innerHTML = null;
+        linksContainer.innerHTML = null;
+        pdfAnchor.href = '/assets/Ficha.pdf';
+        pdfAnchor.target = '_blank';
+        pdfAnchor.classList.add('link-with-icon');
+        pdfAnchorIcon.classList.add('fas', 'fa-file-pdf');
 
-      for (const line of Object.entries(target.dataset).map(x => x[1])) {
-        const e = document.createElement(line === 'Intereses' ? 'h3' : 'p');
-        e.innerText = line;
-        infoContainer.appendChild(e);
-      }
+        pdfAnchor.appendChild(pdfAnchorIcon);
 
-      linksContainer.appendChild(pdfAnchor);
+        for (const line of Object.entries(target.dataset).map(x => x[1])) {
+          const e = document.createElement(line === 'Intereses' ? 'h3' : 'p');
+          e.innerText = line;
+          infoContainer.appendChild(e);
+        }
 
-      document.querySelector('.card-container').classList.replace('hidden', 'shown');
+        linksContainer.appendChild(pdfAnchor);
+
+        card.classList.replace('transparent', 'opaque');
+      }, 150);
     });
   }
 });

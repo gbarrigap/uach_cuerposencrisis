@@ -299,7 +299,7 @@ body {
     }
 
     div#quienes-somos-container {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr 34rem;
       grid-gap: 4rem;
       justify-items: center;
 
@@ -343,29 +343,25 @@ body {
         }
       }
 
-      div.card-container {
-        div.card {
-          display: flex;
-          flex-flow: column;
-          height: 40rem;
-          opacity: 1;
+      div.card {
+        display: flex;
+        flex-flow: column;
+        width: 100%;
+        height: 40rem;
+        transition: opacity 150ms;
 
-          div {
-            &.card-image {
-              img {
-                width: 100%;
-              }
-            }
+        img {
+          width: 100%;
+          object-fit: cover;
+        }
 
-            &.card-body {
-              display: grid;
-              grid-template-columns: 1fr 2rem;
-              margin: 0.5rem;
+        .card-body {
+          display: grid;
+          grid-template-columns: 1fr 2rem;
+          margin: 0.5rem;
 
-              p:first-child {
-                font-weight: bold;
-              }
-            }
+          p:first-child {
+            font-weight: bold;
           }
         }
       }
