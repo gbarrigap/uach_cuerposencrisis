@@ -359,6 +359,8 @@ body {
       div.info {
         border: 0.75rem #a8a8a8 solid;
         padding: 2.25rem;
+        overflow-y: auto;
+        height: 20rem;
 
         h4:not(:first-child) {
           margin-top: 1rem;
