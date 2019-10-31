@@ -410,7 +410,7 @@ body {
     div#metodologias-metodologia_2-container,
     div#publicaciones-articulos-container,
     div#publicaciones-ponencias-container {
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       grid-gap: 1rem;
 
       &#archivos-prensa-container {
@@ -458,10 +458,12 @@ body {
     div#publicaciones-articulos-container,
     div#publicaciones-ponencias-container {
       div.card {
-        display: grid;
+        display: flex;
+        flex-flow: column;
         height: 20rem;
-        width: 15rem;
+        width: 100%;
         padding: 1rem;
+        overflow-y: auto;
 
         i {
           font-size: 2rem;

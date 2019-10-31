@@ -1,13 +1,42 @@
+<div class="card">
+  <h2>Título: "Propuesta para un análisis crítico del cuerpo versus la ciudad en obras coreográficas del Chile postdictadura"</h2>
+  <p>Autor@s: Marcela Hurtado, Rodrigo Browne, Katherine Barriga y Bárbara Fernández</p>
+  <p>Año: 2020</p>
+  <p>Resumen</p>
+  <p>
+    La presente propuesta busca analizar críticamente los discursos sobre el
+    cuerpo contenidos en diez obras coreográficas o producciones dancísticas
+    realizadas en Chile entre 1990 y 2010. Este periodo contiene un cambio
+    paradigmático, pues a la postdictadura se suma el desarrollo del sistema
+    neoliberal y con ello el tratamiento del cuerpo que permuta en y a todos
+    los ámbitos, cuestión que influye sobre manera y especialmente en la danza
+    y sus representaciones espacio-temporales en la ciudad.
+   </p>
+  <p>
+    En consecuencia, las propuestas dancísticas actúan como resistencias y
+    subversión a un sistema que borra y niega la condición básica de los seres
+    humanos: el cuerpo y su correlato en la ciudad. Las posibilidades
+    discursivas de las obras se expanden pues ya no es necesario resistir a la
+    dictadura y sus efectos en términos de gobierno, pero sí en tanto cuerpo
+    de cara a las nuevas vanguardias socioeconómicas de corte neoliberal que
+    imperan en los espacios urbanos del Chile actual.
+  </p>
+  <% if !!current_user %>
+    <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
+  <% else %>
+    <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+  <% end %>
+</div>
 <% (1..4).each do |i| %>
-  <div class="card">
-    <h2>Titulo</h2>
-    <p>Autor(es)</p>
-    <p>Año</p>
-    <p>Resumen</p>
-    <% if !!current_user %>
-      <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
-    <% else %>
-      <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
-    <% end %>
-  </div>
+<div class="card">
+  <h2>Título</h2>
+  <p>Autor@s</p>
+  <p>Año</p>
+  <p>Resumen</p>
+  <% if !!current_user %>
+    <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
+  <% else %>
+    <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+  <% end %>
+</div>
 <% end %>
