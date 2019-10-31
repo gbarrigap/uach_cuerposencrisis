@@ -700,10 +700,8 @@ body {
       transition: opacity 150ms;
       opacity: 0;
 
-      img {
-        object-fit: scale-down;
-        margin-top: 0.5rem;
-        width: 100%;
+      i {
+        font-size: 8rem;
       }
 
       &:hover {
