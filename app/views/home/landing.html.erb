@@ -117,6 +117,9 @@
   <div id="metodologias-metodologia_2-container" class="inner-container hidden">
     <%= render 'metodologias_2' %>
   </div>
+  <div id="amigos-container" class="inner-container hidden">
+    <%= render 'amigos' %>
+  </div>
   <div class="nav-button-container nav-button-archivos-container hidden">
     <%= icon('fas', 'angle-right', class: 'nav-button nav-button-right', id: 'nav-button-archivos', data: { goto: 'archivos', titulo: 'Archivos' }) %>
     <h2>Archivos</h2>
@@ -126,7 +129,7 @@
     <h2>Proyectos</h2>
   </div>
   <div class="image-container amigos">
-    <%= image_tag('undraw_social_girl_562b.svg') %>
+    <%= image_tag('undraw_social_girl_562b.svg', class: 'nav-button', id: 'nav-button-amigos', data: { goto: 'amigos', titulo: 'Amigos' }) %>
     <h2>Amig@s</h2>
   </div>
 </div>
