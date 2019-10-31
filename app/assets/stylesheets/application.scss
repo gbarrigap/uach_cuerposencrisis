@@ -116,21 +116,23 @@ a.link-with-icon {
   }
 }
 
-img {
-  &.button {
-    border: 0.375rem #cadad3ff solid;
-    padding: 0.125rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
+.button {
+  display: flex;
+  border: 0.375rem #cadad3ff solid;
+  padding: 0.125rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    &.highlight {
-      transition: border-color 350ms;
+  &.highlight {
+    transition: border-color 350ms;
 
-      &:hover {
-        padding: 0;
-        border-width: 0.5rem;
-        border-color: #cadad3ff;
-      }
+    &:hover {
+      padding: 0;
+      border-width: 0.5rem;
+      border-color: #cadad3ff;
     }
   }
 }
