@@ -720,15 +720,49 @@ body {
     }
 
     div#amigos-container {
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      grid-template-columns: repeat(5, minmax(15rem, 1fr));
+      grid-template-rows: repeat(2, minmax(15rem, 1fr));
       grid-gap: 1rem;
       align-items: baseline;
       align-self: center;
       justify-items: center;
 
-      .with-text img.circle {
-        width: 15rem;
-        height: 15rem;
+      a {
+        background-image: image-url('imagen_generica.png');
+        background-position: center;
+        background-size: 30rem;
+        grid-column: auto;
+        grid-row: auto;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        color: white;
+        font-size: 2.2rem;
+        font-weight: bold;
+        transition: background-size 150ms;
+
+        p {
+          width: 100%;
+          height: 100%;
+          padding: 1rem;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #000c;
+          opacity: 0;
+          transition: opacity 150ms;
+        }
+
+        &:hover {
+          background-size: 35rem;
+
+          p {
+            opacity: 1;
+          }
+        }
       }
     }
 
