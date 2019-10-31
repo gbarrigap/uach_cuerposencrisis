@@ -693,12 +693,13 @@ body {
       display: flex;
       flex-flow: column-reverse;
       align-items: center;
+      margin-bottom: 2rem;
       cursor: pointer;
       transition: opacity 150ms;
       opacity: 0;
 
       i {
-        font-size: 8rem;
+        font-size: 2rem;
       }
 
       &:hover {
