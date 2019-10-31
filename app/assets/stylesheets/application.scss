@@ -48,6 +48,14 @@ p {
   display: grid;
 }
 
+.opaque {
+  opacity: 1;
+}
+
+.transparent {
+  opacity: 0;
+}
+
 .cards-container {
   display: flex;
   flex-flow: row wrap;
