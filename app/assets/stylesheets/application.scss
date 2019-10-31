@@ -403,9 +403,8 @@ body {
     div#publicaciones-audiovisuales-container {
       grid-template-columns: repeat(7, 1fr);
       grid-gap: 1rem;
-      justify-items: center;
 
-      div {
+      div.video-container {
         grid-row: 1;
         grid-column: 1/8;
 
@@ -425,8 +424,19 @@ body {
         }
       }
 
-      img {
+      div {
         grid-row: 2;
+
+        &.circle {
+          width: 8rem;
+          height: 8rem;
+
+          p {
+            font-size: 2rem;
+            font-weight: bold;
+            line-height: 2rem;
+          }
+        }
       }
     }
 

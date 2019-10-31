@@ -2,6 +2,6 @@
   <%= video_tag('', size: '640x360', controls: true) %>
   <%= link_to icon('fas', 'file-pdf', 'Descargar ficha técnica'), '/assets/Ficha.pdf', target: '_blank' %>
 </div>
-<% (1..7).each.with_index(0) do |image, index| %>
-<%= image_tag('imagen_generica.png', class: 'button command-button highlight circle') %>
+<% ['DO<br>MES', 'ES<br>TIPO', 'VIO<br>Nº1', 'CUA<br>MOV', 'VIO<br>Nº2', 'ES<br>PA', 'VIO<br>Nº3'].each do |text| %>
+  <div class="button command-button highlight circle"><%= simple_format(text) %></div>
 <% end %>
