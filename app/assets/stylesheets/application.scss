@@ -419,7 +419,7 @@ body {
         div.card {
           grid-column: 1;
           grid-row: 1/3;
-          height: 20rem;
+          height: 15rem;
           padding: 1rem;
 
           div {
@@ -467,7 +467,6 @@ body {
       div.card {
         display: flex;
         flex-flow: column;
-        height: 20rem;
         padding: 1rem;
         overflow-y: auto;
 
