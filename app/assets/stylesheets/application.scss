@@ -412,21 +412,6 @@ body {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       grid-gap: 1rem;
 
-      &#archivos-prensa-container {
-        a {
-          text-decoration: none;
-          color: black;
-          width: 100%;
-          margin-top: 1rem;
-          opacity: 0.8;
-          transition: opacity 150ms;
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-      }
-
       & > div {
         display: grid;
         grid-template-rows: 1fr 75px 75px;
@@ -437,17 +422,24 @@ body {
           height: 20rem;
           padding: 1rem;
 
+          div {
+            margin-top: 0.5rem;
+          }
+
           i {
             font-size: 2rem;
             align-self: flex-end;
           }
 
           a {
-            grid-column: 1;
             text-decoration: none;
             color: black;
-            opacity: 0.8;
+            opacity: 0.5;
             transition: opacity 150ms;
+
+            &:first-child {
+              margin-right: 0.5rem;
+            }
 
             &:hover {
               opacity: 1;
@@ -466,14 +458,6 @@ body {
           div.card {
             opacity: 1;
           }
-        }
-      }
-
-      &#metodologias-metodologia_1-container,
-      &#metodologias-metodologia_2-container {
-        div.card > div {
-          display: flex;
-          justify-content: space-between;
         }
       }
     }

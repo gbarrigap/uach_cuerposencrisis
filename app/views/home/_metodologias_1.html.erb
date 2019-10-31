@@ -7,12 +7,12 @@
       <p>Participantes:</p>
       <p>Año:</p>
       <div>
-      <% if !!current_user %>
-        <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
-      <% else %>
-        <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
-      <% end %>
-      <%= link_to icon('fas', 'camera-retro') %>
+        <% if !!current_user %>
+          <%= link_to icon('fas', 'file-pdf'), '/assets/Ficha.pdf', target: '_blank' %>
+        <% else %>
+          <%= icon('fas', 'file-pdf', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+        <% end %>
+        <%= link_to icon('fas', 'camera-retro') %>
       </div>
     </div>
     <%= image_tag('imagen_generica.png', class: 'circle') %>

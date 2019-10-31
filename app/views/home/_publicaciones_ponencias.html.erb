@@ -1,39 +1,56 @@
-<div class="card">
-  <h2>Título: “Cuerpos en crisis: intermedios y violencia, problematización del archivo audiovisual”</h2>
-  <p>Autor@s: Marcela Hurtado Rubio</p>
-  <p>Lugar de presentación: “VIII Congreso Internacional de la AHBx. Las humanidades desde la perspectiva del usuario”. Facultad de Artes, Universidad de Groninga, Países Bajos.</p>
-  <p>Año: 2018</p>
-  <p>Resumen</p>
-  <p>
-    La presente propuesta es parte del proyecto de Investigación "Cuerpos en Crisis. Análisis del discurso corporal en 10 obras de coreógrafos chilenos contemporáneos", Fondart 459483, en ella abordaremos la intermediación de imágenes coreográficas o producciones dancísticas realizadas en Chile entre 1990 y 2010. Este período contiene un cambio paradigmático pues a la postdictaaura se suma el desarrollo del sistema neoliberal y con ello el tratamiento del cuerpo que permuta en y a todos los ámbitos, cuestión que influye sobre manera y espe­cialmente en la danza y sus representaciones espacio-temporales de la violencia. Para mediar con los formatos efímeros de la danza hemos decidido entender al archivo, como un intervalo que guarda y desecha (Silva Echeto, 2018) penetrando en su falta de precisión histórica, estética y/ o discursiva, para así poder hacer lecturas densas de las obras y sus manifestaciones de violencia, expresada por la crisis que propone el problema escénico. Desde estos ejes proponemos una metodología de análisis que explora en los intersticios del archivo audiovisual, la entrevista y la experiencia del espectador.
-  </p>
-  <% if !!current_user %>
-    <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
-  <% else %>
-    <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
-  <% end %>
+<div>
+  <div class="card">
+    <h2>Título: “Cuerpos en crisis: intermedios y violencia, problematización del archivo audiovisual”</h2>
+    <p>Autor@s: Marcela Hurtado Rubio</p>
+    <p>Lugar de presentación: “VIII Congreso Internacional de la AHBx. Las humanidades desde la perspectiva del usuario”. Facultad de Artes, Universidad de Groninga, Países Bajos.</p>
+    <p>Año: 2018</p>
+    <p>Resumen</p>
+    <p>
+      La presente propuesta es parte del proyecto de Investigación "Cuerpos en Crisis. Análisis del discurso corporal en 10 obras de coreógrafos chilenos contemporáneos", Fondart 459483, en ella abordaremos la intermediación de imágenes coreográficas o producciones dancísticas realizadas en Chile entre 1990 y 2010. Este período contiene un cambio paradigmático pues a la postdictaaura se suma el desarrollo del sistema neoliberal y con ello el tratamiento del cuerpo que permuta en y a todos los ámbitos, cuestión que influye sobre manera y espe­cialmente en la danza y sus representaciones espacio-temporales de la violencia. Para mediar con los formatos efímeros de la danza hemos decidido entender al archivo, como un intervalo que guarda y desecha (Silva Echeto, 2018) penetrando en su falta de precisión histórica, estética y/ o discursiva, para así poder hacer lecturas densas de las obras y sus manifestaciones de violencia, expresada por la crisis que propone el problema escénico. Desde estos ejes proponemos una metodología de análisis que explora en los intersticios del archivo audiovisual, la entrevista y la experiencia del espectador.
+    </p>
+    <div>
+      <% if !!current_user %>
+        <%= link_to icon('fas', 'file-pdf'), '/assets/Ficha.pdf', target: '_blank' %>
+      <% else %>
+        <%= icon('fas', 'sign-in-alt', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+      <% end %>
+    </div>
+  </div>
 </div>
-<div class="card">
-  <h2>Título: “Cuerpos en Crisis, discurso corporal en coreografías chilenas 1990- 2010”</h2>
-  <p>Autor@s: Marcela Hurtado Rubio</p>
-  <p>Lugar de presentación: “Quinto Congreso Tendencias Escénicas”. Facultad de Diseño y Comunicación de la Universidad de Palermo, Buenos Aires, Argentina.</p>
-  <p>Año: 2018</p>
-  <p>Resumen</p>
-  <p>
-    Los discursos contenidos en las producciones dancísticas estudiadas en el corpus de esta investigación contienen los cambios sufridos en la representación corporal de 1990 2010 Este periodo contiene un cambio paradigmático en Chile pues a la posdictadura se suma el desarrollo del sistema neoliberal y con ello el tratamiento del cuerpo cambia en todos los ámbitos y, así también la danza interpreta este nuevo estado de las cosas. Las propuestas dancísticas estudiadas contienen en sí mismas pensamiento crítico y actúan como resistencias y subversión a un sistema que borra y niega la condición básica de los seres humanos, el cuerpo Las posibilidades discursivas de las obras se expanden pues ya no es necesario resistir a la dictadura y sus efectos en términos de gobierno, pero sí en tanto cuerpo.
-  </p>
+<div>
+  <div class="card">
+    <h2>Título: “Cuerpos en Crisis, discurso corporal en coreografías chilenas 1990- 2010”</h2>
+    <p>Autor@s: Marcela Hurtado Rubio</p>
+    <p>Lugar de presentación: “Quinto Congreso Tendencias Escénicas”. Facultad de Diseño y Comunicación de la Universidad de Palermo, Buenos Aires, Argentina.</p>
+    <p>Año: 2018</p>
+    <p>Resumen</p>
+    <p>
+      Los discursos contenidos en las producciones dancísticas estudiadas en el corpus de esta investigación contienen los cambios sufridos en la representación corporal de 1990 2010 Este periodo contiene un cambio paradigmático en Chile pues a la posdictadura se suma el desarrollo del sistema neoliberal y con ello el tratamiento del cuerpo cambia en todos los ámbitos y, así también la danza interpreta este nuevo estado de las cosas. Las propuestas dancísticas estudiadas contienen en sí mismas pensamiento crítico y actúan como resistencias y subversión a un sistema que borra y niega la condición básica de los seres humanos, el cuerpo Las posibilidades discursivas de las obras se expanden pues ya no es necesario resistir a la dictadura y sus efectos en términos de gobierno, pero sí en tanto cuerpo.
+    </p>
+    <div>
+      <% if !!current_user %>
+        <%= link_to icon('fas', 'file-pdf'), '/assets/Ficha.pdf', target: '_blank' %>
+      <% else %>
+        <%= icon('fas', 'sign-in-alt', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <% (1..4).each do |i| %>
-<div class="card">
-  <h2>Titulo</h2>
-  <p>Autor(es)</p>
-  <p>Año</p>
-  <p>Lugar de presentación</p>
-  <p>Resumen</p>
-  <% if !!current_user %>
-    <%= link_to icon('fas', 'file-pdf', 'Descargar archivo'), '/assets/Ficha.pdf', target: '_blank' %>
-  <% else %>
-    <%= icon('fas', 'sign-in-alt', 'Inicie sesión para descargar archivos', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
-  <% end %>
+<div>
+  <div class="card">
+    <h2>Titulo</h2>
+    <p>Autor(es)</p>
+    <p>Año</p>
+    <p>Lugar de presentación</p>
+    <p>Resumen</p>
+    <div>
+      <% if !!current_user %>
+        <%= link_to icon('fas', 'file-pdf'), '/assets/Ficha.pdf', target: '_blank' %>
+      <% else %>
+        <%= icon('fas', 'sign-in-alt', class: 'nav-button nav-button-login', id: 'nav-button-login', data: { goto: 'login' }) %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <% end %>
