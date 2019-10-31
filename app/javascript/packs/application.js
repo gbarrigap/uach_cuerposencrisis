@@ -155,13 +155,27 @@ document.addEventListener("turbolinks:load", function() {
     }) => {
 
       const cardBody = document.querySelector('#quienes-somos-container .card-body');
-      cardBody.innerHTML = null;
+      const infoContainer = cardBody.querySelector('.info');
+      const linksContainer = cardBody.querySelector('.links');
+      const pdfAnchor = document.createElement('a');
+      const pdfAnchorIcon = document.createElement('i')
+
+      infoContainer.innerHTML = null;
+      linksContainer.innerHTML = null;
+      pdfAnchor.href = '/assets/Ficha.pdf';
+      pdfAnchor.target = '_blank';
+      pdfAnchor.classList.add('link-with-icon');
+      pdfAnchorIcon.classList.add('fas', 'fa-file-pdf');
+
+      pdfAnchor.appendChild(pdfAnchorIcon);
 
       for (const line of Object.entries(target.dataset).map(x => x[1])) {
         const e = document.createElement(line === 'Intereses' ? 'h3' : 'p');
         e.innerText = line;
-        cardBody.appendChild(e);
+        infoContainer.appendChild(e);
       }
+
+      linksContainer.appendChild(pdfAnchor);
 
       document.querySelector('.card-container').classList.replace('hidden', 'shown');
     });
